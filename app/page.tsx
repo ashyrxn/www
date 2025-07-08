@@ -50,7 +50,7 @@ const SOCIAL_LINKS = [
   },
   {
     name: "Github",
-    icon: "line-md:github-twotone",
+    icon: "mingcute:github-line",
     url: "https://github.com/ashyrxn",
     hoverColor: "hover:text-gray-300",
     bgColor: "hover:bg-gray-500/10",
