@@ -2,6 +2,10 @@ import type { Metadata } from "next"
 import type React from "react"
 import "./globals.css"
 import { Inter, JetBrains_Mono } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -70,6 +74,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <Analytics/>
+      <SpeedInsights/>
       <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased bg-zinc-950 text-zinc-100`}>
         {children}
         <script
