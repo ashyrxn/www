@@ -1,0 +1,97 @@
+import type { Metadata } from "next"
+import type React from "react"
+import "./globals.css"
+import { Inter, JetBrains_Mono } from "next/font/google"
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+})
+
+export const metadata: Metadata = {
+  title: "Ash's Boundary ⭐️",
+  description: "I'm not quite alive, not quite gone. Just me and my links in the space between.",
+  authors: [{ name: "Ash" }],
+  creator: "Ash",
+  keywords: ["Ash", "ashyrxn", "portfolio", "developer", "portugal", "social links"],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" }
+    ],
+    shortcut: "/favicon.ico",
+  },
+  manifest: "/manifest.json",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://ashyrxn.xyz",
+    title: "Ash's Boundary ⭐️",
+    description: "I'm not quite alive, not quite gone. Just me and my links in the space between.",
+    siteName: "Ash's Boundary",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Ash's Boundary",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ash's Boundary",
+    description: "I'm not quite alive, not quite gone. Just me and my links in the space between.",
+    creator: "@ashyrxn",
+    images: ["/og.png"],
+  },
+  generator: "v0",
+  metadataBase: new URL("https://ashyrxn.xyz"),
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased bg-zinc-950 text-zinc-100`}>
+        {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Ash",
+              description: "Not quite alive, not quite gone. A personal space between the boundaries",
+              url: "https://ashyrxn.xyz",
+              sameAs: [
+                "https://github.com/ashyrxn",
+                "https://x.com/ashyrxn",
+                "https://instagram.com/ashyrxn",
+                "https://reddit.com/u/ashyrxn",
+                "https://bsky.app/profile/ashyrxn.xyz",
+              ],
+            }),
+          }}
+        />
+      </body>
+    </html>
+  )
+}
