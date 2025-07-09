@@ -1,88 +1,88 @@
 # Ashyrxn.xyz
 
-Um portfólio pessoal moderno e responsivo construído com Next.js 15.
+A modern, responsive personal portfolio website built with Next.js 15.
 
-## 🚀 Tecnologias
+## 🚀 Tech Stack
 
-- **Next.js 15** - Framework React
-- **Tailwind CSS** - Estilização
-- **TypeScript** - Linguagem
-- **Vercel** - Deploy
+- **Next.js 15** - React Framework
+- **Tailwind CSS** - Styling
+- **TypeScript** - Language
+- **Vercel** - Deployment
 
-## ✨ Características
+## ✨ Features
 
-- Design moderno e responsivo
-- Tema escuro com acentos laranja
-- Animações suaves
-- Otimizado para SEO
-- Acessível (WCAG)
+- Modern responsive design
+- Dark theme with orange accents
+- Smooth animations
+- SEO optimized
+- Accessible (WCAG)
 
-## 🏃‍♂️ Começar
+## 🏃‍♂️ Getting Started
 
 ```bash
-# Clonar repositório
+# Clone repository
 git clone https://github.com/ashyrxn/www.git
 cd www
 
-# Instalar dependências
+# Install dependencies
 bun install
 
-# Executar em desenvolvimento
+# Run in development
 bun run dev
 ```
 
-Acesse `http://localhost:3000`
+Open `http://localhost:3000`
 
-## 📁 Estrutura
+## 📁 Project Structure
 
 ```
 ├── app/
-│   ├── page.tsx           # Página principal
-│   ├── layout.tsx         # Layout e metadados
-│   └── globals.css        # Estilos globais
-├── components/ui/         # Componentes reutilizáveis
-├── public/int/           # Imagens (avatar, background)
-└── tailwind.config.js    # Configuração do Tailwind
+│   ├── page.tsx           # Main page
+│   ├── layout.tsx         # Layout and metadata
+│   └── globals.css        # Global styles
+├── components/ui/         # Reusable components
+├── public/int/           # Images (avatar, background)
+└── tailwind.config.js    # Tailwind configuration
 ```
 
-## ⚙️ Personalizar
+## ⚙️ Customization
 
-### Informações Pessoais
-Edite as constantes em `app/page.tsx`:
+### Personal Information
+Edit constants in `app/page.tsx`:
 
 ```typescript
 const PROFILE = {
-  name: "Seu Nome",
-  title: "Seu Título",
-  bio: "Sua descrição",
-  email: "seu.email@exemplo.com"
+  name: "Your Name",
+  title: "Your Title",
+  bio: "Your description",
+  email: "your.email@example.com"
 }
 ```
 
-### Cores
-Modifique em `tailwind.config.js`:
+### Colors
+Modify in `tailwind.config.js`:
 
 ```javascript
 colors: {
-  primary: "#cd3e16",    // Laranja principal
-  secondary: "#e75d05",  // Laranja claro
-  accent: "#f5dc4e"      // Dourado
+  primary: "#cd3e16",    // Main orange
+  secondary: "#e75d05",  // Light orange
+  accent: "#f5dc4e"      // Gold
 }
 ```
 
-### Imagens
-Substitua os arquivos em `public/int/`:
-- `avatar.webp` - Sua foto
-- `background.webp` - Imagem de fundo
+### Images
+Replace files in `public/int/`:
+- `avatar.webp` - Your photo
+- `background.webp` - Background image
 
-## 🌐 Deploy
+## 🌐 Deployment
 
-### Vercel (Recomendado)
-1. Faça push para o GitHub
-2. Importe o projeto no Vercel
-3. Deploy automático
+### Vercel (Recommended)
+1. Push to GitHub
+2. Import project in Vercel
+3. Automatic deployment
 
-### Outros
+### Others
 ```bash
 bun run build
 bun start
